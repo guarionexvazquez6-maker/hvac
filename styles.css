@@ -345,3 +345,176 @@ nav a:hover {
     height: 300px;
   }
 }
+
+
+
+/* ==================================
+   HOME CATEGORY CARDS (NEW)
+================================== */
+
+/* ==================================
+   HOME CATEGORY CARDS
+================================== */
+
+.category-card {
+  background: var(--accent-yellow);
+
+  border-radius: 14px;
+  padding: 30px 25px;
+
+  text-align: center;
+
+  border: none;
+
+  transition: all 0.25s ease;
+
+  position: relative;
+
+  cursor: pointer;
+
+  overflow: visible;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.category-card h3 {
+
+  color: var(--primary-blue);
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.category-card:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+
+  background: #ffd633;
+}
+
+/* ==================================
+   HOVER PRODUCTS POPUP
+================================== */
+
+.hover-products {
+
+  position: absolute;
+
+  top: calc(100% + 5px);
+  left: 0;
+
+  width: 100%;
+
+  background: white;
+
+  border-radius: 12px;
+
+  padding: 15px 20px;
+
+  text-align: left;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-10px);
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  z-index: 999;
+}
+
+.hover-products p {
+
+  margin: 8px 0;
+
+  color: #444;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition: all 0.2s ease;
+}
+
+.hover-products p:hover {
+
+  color: var(--primary-blue);
+
+  padding-left: 6px;
+}
+
+.category-card:hover .hover-products {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .category-card {
+    padding: 20px;
+  }
+
+  .category-card h3 {
+    font-size: 18px;
+  }
+
+  .hover-products {
+
+    position: static;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: none;
+
+    margin-top: 15px;
+
+    border-radius: 10px;
+
+    box-shadow: none;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .category-card {
+    padding: 20px;
+  }
+
+  .category-card h3 {
+    font-size: 16px;
+  }
+
+  .hover-products {
+
+    position: static;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: none;
+
+    margin-top: 15px;
+
+    border-radius: 10px;
+
+    box-shadow: none;
+  }
+
+}
